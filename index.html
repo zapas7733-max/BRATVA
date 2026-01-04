@@ -1,0 +1,198 @@
+<!DOCTYPE html><html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <title>BRATVA | Majestic RP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: radial-gradient(circle at top, #1a1a1a 0%, #020b1a 60%, #000 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: url('https://i.imgur.com/8KQZ5ZP.png');
+      opacity: 0.15;
+      animation: smoke 60s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes smoke {
+      from { background-position: 0 0; }
+      to { background-position: 2000px -1000px; }
+    }
+    header {
+      padding: 50px 20px;
+      text-align: center;
+      background: #050505;
+      border-bottom: 4px solid #0b2a4a;
+      color: #fff;
+    }
+    header h1 { margin: 0; font-size: 48px; letter-spacing: 4px; }
+    header p { margin-top: 10px; font-weight: 500; opacity: 0.8; }
+    nav {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;
+      background: #020b1a; padding: 15px;
+    }
+    nav button {
+      background: transparent; border: 1px solid #0b2a4a; color: #fff;
+      padding: 10px 22px; cursor: pointer; transition: 0.3s;
+    }
+    nav button.active, nav button:hover { background: #0b2a4a; color: #fff; }
+    section {
+      display: none; max-width: 900px; margin: auto; padding: 60px 20px;
+      color: #fff; position: relative; z-index: 2;
+    }
+    section.active { display: block; }
+    h2 { letter-spacing: 2px; margin-bottom: 20px; }
+    .box {
+      background: rgba(0,0,0,0.55); padding: 30px; border-left: 5px solid #0b2a4a;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6);
+    }
+    ul { line-height: 1.9; }
+    input, textarea {
+      width: 100%; padding: 12px; margin-top: 10px; margin-bottom: 20px;
+      border: none; background: #111; color: #fff;
+    }
+    .btn {
+      background: #0b2a4a; color: #fff; border: none;
+      padding: 14px 30px; cursor: pointer; font-weight: 700;
+    }
+    footer {
+      text-align: center; padding: 25px; color: #fff; opacity: 0.6;
+    }
+  #intro{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;z-index:9999;} .intro-content{text-align:center;color:#fff;animation:fadeIntro 2.5s ease forwards;} @keyframes fadeIntro{0%{opacity:1}100%{opacity:0;}} .counter{font-size:22px;margin-top:10px;color:#0b2a4a;} </style>
+</head>
+<body>
+<div id="intro">
+  <div class="intro-content">
+    <h1>BRATVA</h1>
+    <p>Blood • Loyalty • Silence</p>
+  </div>
+</div><header>
+  <h1>BRATVA</h1>
+  <p>Majestic RP • Blood • Loyalty • Silence</p>
+</header><nav>
+  <button class="active" onclick="showSection('info')">Informacje</button>
+  <button onclick="showSection('rekrutacja')">Rekrutacja</button>
+  <button onclick="showSection('jak')">Jak napisać podanie</button>
+  <button onclick="showSection('podanie')">Podanie</button>
+  <button onclick="showSection('rangi')">Rangi</button>
+  <button onclick="showSection('status')">Status</button>
+  <button onclick="showSection('regulamin')">Regulamin</button>
+  <button onclick="window.open('https://discord.gg/TWOJ-LINK','_blank')">Dołącz do DC</button>
+</nav><section id="info" class="active">
+  <h2>O Rodzinie</h2>
+  <div class="box">
+    <p>BRATVA to zamknięta rodzina działająca na Majestic RP. Liczy się charakter, lojalność i jakość RP.</p>
+    <p>Nie szukamy ilości. Szukamy ludzi, którzy rozumieją klimat i konsekwencje.</p>
+  </div>
+</section><section id="rekrutacja">
+  <h2>Rekrutacja</h2>
+  <div class="box">
+    <ul>
+      <li>Wiek: 16+</li>
+      <li>Sprawny mikrofon</li>
+      <li>Znajomość zasad Majestic RP</li>
+      <li>Aktywność i kultura osobista</li>
+      <li>Zakaz multi-frakcji</li>
+    </ul>
+  </div>
+</section><section id="jak">
+  <h2>Jak napisać podanie</h2>
+  <div class="box">
+    <ul>
+      <li>Pisz pełnymi zdaniami</li>
+      <li>Nie kopiuj podań</li>
+      <li>Opisz doświadczenie RP</li>
+      <li>Pokaż, dlaczego to TY pasujesz do BRATVA</li>
+    </ul>
+  </div>
+</section><section id="podanie">
+  <h2>Podanie</h2>
+  <div class="box">
+    <form id="appForm">
+      <label>Nick IC / OOC</label>
+      <input id="nick" type="text" required />
+      <label>Wiek</label>
+      <input id="wiek" type="number" required />
+      <label>Doświadczenie RP</label>
+      <textarea id="doswiadczenie"></textarea>
+      <label>Dlaczego BRATVA?</label>
+      <textarea id="dlaczego"></textarea>
+      <button class="btn" type="submit">Wyślij podanie</button>
+    </form>
+  </div>
+</section><section id="rangi">
+  <h2>Struktura i Rangi</h2>
+  <div class="box">
+    <ul>
+      <li><b>Boss</b> – Ostateczna władza, decyzje niepodważalne.</li>
+      <li><b>Underboss</b> – Prawa ręka bossa, zarządza operacjami.</li>
+      <li><b>Capo</b> – Dowódcy ekip, planowanie akcji.</li>
+      <li><b>Soldato</b> – Pełnoprawny członek rodziny.</li>
+      <li><b>Prospect</b> – Okres próbny, obserwacja.</li>
+    </ul>
+  </div>
+</section><section id="status">
+  <h2>Status Rodziny</h2>
+  <div class="box">
+    <p><b>Rekrutacja:</b> 🟢 OTWARTA</p>
+    <p><b>Aktywni członkowie:</b> <span class="counter" id="members">12</span></p>
+    <p>Status może ulec zmianie bez zapowiedzi.</p>
+  </div>
+</section><section id="regulamin">
+  <h2>Regulamin Rodziny</h2>
+  <div class="box">
+    <ul>
+      <li>Bez lojalności nie ma BRATVA.</li>
+      <li>Zakaz wynoszenia IC informacji poza rodzinę.</li>
+      <li>Szacunek do rang i struktury.</li>
+      <li>Zakaz powergamingu i metagamingu.</li>
+      <li>Decyzje góry są ostateczne.</li>
+    </ul>
+  </div>
+</section><footer>
+  © BRATVA | Majestic RP
+</footer><script>
+  // Fade-in animation
+  document.body.style.opacity = 0;
+  window.onload = () => { document.body.style.transition = 'opacity 1.5s'; document.body.style.opacity = 1; }
+  function showSection(id)(id) {
+    document.querySelectorAll('section').forEach(s => s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+    event.target.classList.add('active');
+  }
+  document.getElementById('appForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const webhook = 'TUTAJ_WKLEJ_WEBHOOK_DISCORD';
+
+    const data = {
+      embeds: [{
+        title: '🩸 Nowe podanie | BRATVA',
+        color: 3447003,
+        fields: [
+          { name: 'Nick', value: document.getElementById('nick').value },
+          { name: 'Wiek', value: document.getElementById('wiek').value },
+          { name: 'Doświadczenie RP', value: document.getElementById('doswiadczenie').value },
+          { name: 'Dlaczego BRATVA', value: document.getElementById('dlaczego').value }
+        ],
+        footer: { text: 'Majestic RP | BRATVA' }
+      }]
+    };
+
+    fetch(webhook, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
+    }).then(() => alert('Podanie wysłane'));
+  });
+setTimeout(()=>document.getElementById('intro').style.display='none',2500);
+</script></body>
+</html>
